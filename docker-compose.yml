@@ -1,0 +1,18 @@
+version: '3.8'
+
+services:
+  app:
+    container_name: LaravelContainer
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command: 'php artisan serve --host=0.0.0.0'
+    volumes:
+      - .:/app
+    ports:
+      - "8081:8000"
+    networks:
+      - laravel_network
+networks:
+  laravel_network:
+    driver: bridge
