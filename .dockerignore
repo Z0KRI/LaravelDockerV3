@@ -1,0 +1,5 @@
+/vendor
+/mysql
+
+README.md
+composer.lock
